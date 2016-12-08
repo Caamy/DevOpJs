@@ -9,7 +9,7 @@
 
 <div class="col-xs-10 ">
 <table class="table table-striped table-condensed">
-	<tr ng-repeat="book in books.books | filter:search:strict">
+	<tr ng-repeat="book in books | filter:search:strict">
 		<td>{{book.title}} </td>
 		<td><button class="btn btn-success btn-sm" ng-click="update(book)">Update</button>
 			<button class="btn btn-success btn-sm" ng-click="delete(book)">Delete</button></td>

@@ -1,10 +1,8 @@
 'use strict';
 
-angular.module('BookApp').controller('ListCtrl', function($scope){
+angular.module('BookApp').controller('ListCtrl', function($scope, Book){
 
-	var Book = $resource('json/book-:id.json');
-
-	$scope.books = Book.query()
+	$scope.books = Book.query();
 
 	$scope.delete = function(book){
 		alert("Delete : " + book.id);

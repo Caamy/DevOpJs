@@ -13,24 +13,55 @@
             <legend>Création d'un livre</legend>
 
             <div class="form-group">
-                <label for="titre">Titre </label>
-                <input type="text" class="form-control" name="titre" id="titre"  ng-model="book.title" required/>
-                <ng
+                <div class="fromGroup">
+                    <label for="titre">Titre </label>
+                    <input type="text" class="form-control" name="titre" id="titre"  ng-model="book.title" required/>
+                    <div ng-if="bookForm.titre.$dirty" ng-messages="bookForm.titre.$error">
+                        <p ng-message="required"> Ce champ est obligatoire !</p>
+                    </div>
+                </div>
 
-                <label for="description">Description</label>
-                <input type="text" class="form-control" name="description" id="description" required />
+                <div class="fromGroup">
+                    <label for="description">Description</label>
+                    <textarea type="text" class="form-control" name="description" id="description" ng-model="book.description" ng-minlength="10" required />
+                    <div ng-if="bookForm.description.$dirty" ng-messages="bookForm.description.$error">
+                        <p ng-message="required">Ce champ est obligatoire !</p>
+                        <p ng-message="minlength">Ce champ doit faire plus de 10 caractères</p>
+                    </div>
+                </div>
 
-                <label for="publishDate">Date de publication</label>
-                <input type="text" class="form-control" name="publishDate" id="publishDate" required/>
+                <div class="fromGroup">
+                    <label for="publishDate">Date de publication</label>
+                    <input type="text" class="form-control" name="publishDate" id="publishDate" ng-model="book.publishDate" required/>
+                    <div ng-if="bookForm.publishDate.$dirty" ng-messages="bookForm.publishDate.$error">
+                        <p ng-message="required">Ce champ est obligatoire !</p>
+                    </div>
+                </div>
 
-                <label for="cover">Couverture du livre</label>
-                <input type="text" class="form-control" name="cover" id="cover" />
+                <div class="fromGroup">
+                    <label for="cover">Couverture du livre</label>
+                    <input type="url" class="form-control" name="cover" id="cover" ng-model="book.cover" required/>
+                    <div ng-if="bookForm.cover.$dirty" ng-messages="bookForm.cover.$error">
+                        <p ng-message="required">Ce champ est obligatoire !</p>
+                        <p ng-message="url">Ce champ doit renseigner une URL</p>
+                    </div>
+                </div>
 
-                <label for="firstName">Prénom de l'auteur</label>
-                <input type="text" class="form-control" name="firstName" id="firstName" required/>
+                <div class="fromGroup">
+                    <label for="firstName">Prénom de l'auteur</label>
+                    <input type="text" class="form-control" name="firstName" id="firstName" ng-model="book.author.firstName" required/>
+                    <div ng-if="bookForm.firstName.$dirty" ng-messages="bookForm.firstName.$error">
+                        <p ng-message="required">Ce champ est obligatoire !</p>
+                    </div>
+                </div>
 
-                <label for="lastName">Nom de l'auteur</label>
-                <input type="text" class="form-control" name="lastName" id="lastName" required/>
+                <div class="fromGroup">
+                    <label for="lastName">Nom de l'auteur</label>
+                    <input type="text" class="form-control" name="lastName" id="lastName" ng-model="book.author.lastName"required/>
+                    <div ng-if="bookForm.lastName.$dirty" ng-messages="bookForm.lastName.$error">
+                        <p ng-message="required">Ce champ est obligatoire !</p>
+                    </div>
+                </div>
             </div>
             <button type="submit" class="btn btn-primary pull-right" ng-disabled="bookForm.$invalid">Submit</button>
 
