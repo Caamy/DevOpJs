@@ -1,0 +1,34 @@
+[
+  {
+    "id":1,
+    "title":"Les Misérables",
+    "description":"Livre trop long",
+    "publicationDate":"2016-10-20T09:47:57.890Z",
+    "author":
+    {
+      "firstName":"Victor",
+      "lastName":"Hugo"
+    },
+    "cover":"http://www.images-booknode.com/book_cover/802/full/les-miserables-801774.jpg"
+  },
+  {
+    "id":2,
+    "title":"Notre-Dame de Paris",
+    "description":"La vie trépidente de Quasimodo",
+    "publicationDate":"2016-10-20T09:47:57.907Z",
+    "author":
+    {
+      "firstName":"Victor",
+      "lastName":"Hugo"
+    },
+    "cover":"http://p5.storage.canalblog.com/56/53/650191/57467920.jpg"
+  },
+  {
+    "id":3,
+    "title":"Le dernier jour d'un condamné",
+    "description":"Il meurt à la fin",
+    "publicationDate":"2016-10-20T09:47:57.907Z",
+    "author":{"firstName":"Victor","lastName":"Hugo"},
+    "cover":"http://p5.storage.canalblog.com/56/53/650191/57467920.jpg"
+  }
+]

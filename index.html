@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> Formation Angular JS </title>
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	</head>
+	
+
+	<body ng-app="BookApp">
+
+        <div class="container">
+            <div ng-controller="NavCtrl">
+                <div
+                    ng-show="isState('list')"
+                    ng-controller="ListCtrl"
+                    ng-include="'list.html'"></div>
+
+                <div
+                    ng-show="isState('form')"
+                    ng-controller="FormCtrl"
+                    ng-include="'form.html'"></div>
+
+            </div>
+        </div>
+        <script src="bootstrap/jquery-3.1.1.min.js"></script>
+        <script src="script/angular.js"></script>
+		<script src=""
+		<script src="bootstrap/bootstrap.min.js"></script>
+		<script src="script/app.js"></script>
+		<script src="script/nav.controller.js"></script>
+		<script src="script/list.controller.js"></script>
+		<script src="script/form.controller.js"></script>
+	</body>
+</html>

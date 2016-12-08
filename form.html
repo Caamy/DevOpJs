@@ -1,0 +1,40 @@
+<h1>Form</h1>
+
+<br>
+<button ng-click="setState('list')" class="btn btn-primary">
+    <span class="glyphicon glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+        Cancel
+    </button>
+
+<br><br>
+<div class="col-xs-6">
+    <form  novalidate name="bookForm" ng-submit="submitBook()">
+        <fieldset>
+            <legend>Création d'un livre</legend>
+
+            <div class="form-group">
+                <label for="titre">Titre </label>
+                <input type="text" class="form-control" name="titre" id="titre"  ng-model="book.title" required/>
+                <ng
+
+                <label for="description">Description</label>
+                <input type="text" class="form-control" name="description" id="description" required />
+
+                <label for="publishDate">Date de publication</label>
+                <input type="text" class="form-control" name="publishDate" id="publishDate" required/>
+
+                <label for="cover">Couverture du livre</label>
+                <input type="text" class="form-control" name="cover" id="cover" />
+
+                <label for="firstName">Prénom de l'auteur</label>
+                <input type="text" class="form-control" name="firstName" id="firstName" required/>
+
+                <label for="lastName">Nom de l'auteur</label>
+                <input type="text" class="form-control" name="lastName" id="lastName" required/>
+            </div>
+            <button type="submit" class="btn btn-primary pull-right" ng-disabled="bookForm.$invalid">Submit</button>
+
+
+        </fieldset>
+    </form>
+</div>
